@@ -7,6 +7,12 @@ $annuaire[] = "Zied";
 
 $motDePasseAdmin = "Tyrolium2026";
 $ageMinimum = 18;
+
+/*phase 3*/
+
+function afficherBadge($nom, $statut){
+    echo "Badge généré $nom-$statut" . "<br>";
+}
 ?>
 /*phase 2*/
 <!doctype html>
@@ -30,3 +36,4 @@ $ageMinimum = 18;
 <button type="submit">Ajouter un répertoire</button>
 </body>
 </html>
+
