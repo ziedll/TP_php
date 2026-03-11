@@ -14,7 +14,7 @@ function afficherBadge($nom, $statut){
     echo "Badge généré $nom-$statut" . "<br>";
 }
 ?>
-/*phase 2*/
+<!--phase 2-->
 <!doctype html>
 <html lang=>
 <head>
@@ -26,8 +26,8 @@ function afficherBadge($nom, $statut){
 </head>
 <body>
 <form action="evaluation_finale.php" method="POST"></form>
-<input type="text" name="prenom" placeholder="">
-<input type="text" name="age" placeholder="">
+<input type="text" name="prenom" placeholder="Entrez votre prénom">
+<input type="number" name="age" placeholder="Entrez votre age">
 <input type="password" name="code" placeholder="Entrez le mdp">
 <select name="statut" id="">
     <option value="Stagiaire">Stagiaire</option>
