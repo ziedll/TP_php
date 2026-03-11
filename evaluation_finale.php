@@ -10,8 +10,22 @@ $ageMinimum = 18;
 
 /*phase 3*/
 
-function afficherBadge($nom, $statut){
+function afficherBadge($prenom, $statut){
     echo "Badge généré $nom-$statut" . "<br>";
+}
+if(isset($_POST["prenom"])&&isset($_POST["statut"])&&isset($_POST["age"])&&isset($_POST["code"])){
+    $prenom = $_POST["prenom"];
+    $age = $_POST["age"];
+    $statut = $_POST["statut"];
+    $code = $_POST["code"];
+    if($age>$ageMinimum && $code == $motDePasseAdmin){
+        $annuaire[] = $prenom;
+        echo "Bienvenue, $prenom a été ajouté ! <br>";
+    }elseif ($age<$ageMinimum || $statut == "Stagiaire"){
+        echo "Erreur : Accès non autorisé pour ce profil";
+    }else{
+        echo "Erreur : Mot de pass admin incorrect";
+    }
 }
 ?>
 <!--phase 2-->
